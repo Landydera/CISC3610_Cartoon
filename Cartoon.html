@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="800" height="400"
+style="border:1px solid black;">
+
+</canvas>
+
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+//sky
+ctx.fillStyle='rgb(0,0,0)';
+ctx.fillRect(0,0,800,400);
+
+//sun, makes a yellow circle
+
+ctx.beginPath();
+ctx.arc(750, 50, 40, 0, Math.PI*2);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+
+
+ 
+ // Draw a triangle for the roof
+
+
+
+//house with windows and door
+ctx.beginPath();
+ctx.fillStyle='olive';
+ctx.fillRect(200, 250, 200, 150);
+//ctx.fillRect(200,300,220,450);
+ctx.fillStyle='chocolate';
+ctx.fillRect(270,350,25,200);
+ctx.strokeRect(220,325,25,25);
+ctx.strokeRect(350,325,25,25);
+//text
+
+
+
+
+
+//roof
+ctx.beginPath();
+ctx.moveTo(100,260);
+ctx.lineTo(300,10);
+ctx.lineTo(500,260);
+ctx.strokeStyle='rgb(210,105,30)';
+ctx.fillStyle='rgb(210,105,30)';
+//ctx.strokeStyle='blue';
+//ctx.fillStyle='blue';
+ctx.fill();
+ctx.stroke();
+
+
+// chimney
+ctx.fillRect(381, 60, 45, 120);
+ctx.strokeRect(381, 60, 45, 140);
+drawEllipse(ctx, 380, 55, 47, 14);
+ctx.fillRect(378, 198, 55, 5);
+
+
+
+
+
+
+
+    
+
+
+
+//text
+ctx.font = '48px serif';
+ctx.strokeText('The house on Mango Steeet..', 10, 50);
+
+
+</script>
+
+</body>
+</html>
